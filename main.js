@@ -26,12 +26,11 @@ items.forEach(function(eachItem){
 // console.log(totalNumberOfItems);
 //converts everything to US dollars
 var itemCurrencyConverter = items.map(function(eachItem, itemId, allItems){
-  console.log();
-  if (eachItem.currency_code === "GBP"){
-    return eachItem.price*1.26;
-  } else {
+  // if (eachItem.currency_code === "GBP"){
+  //   return eachItem.price*1.26;
+  // } else {
     return eachItem.price;
-  }
+  // }
 });
 
 // console.log(itemCurrencyConverter);
