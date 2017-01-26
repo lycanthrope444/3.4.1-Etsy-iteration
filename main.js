@@ -59,9 +59,9 @@ function isTrue (value){
   if (value){
     return true;
   }
-  else {
-    return false;
-  }
+  // else {
+  //   return false;
+  // }
 }
 
 var cleanPriceArray = priceFinderArray.filter(isTrue);
@@ -98,6 +98,31 @@ items.forEach(function(eachItem, itemId, allItems){
   });
 });
 
+// items.materials.forEach(function(eachItem, itemId, allItems){
+//   if (component === "wood"){
+//     console.log(eachItem.title +" is made of "+component);
+//   }
+// });
+
 /*
  * Question 5
  */
+
+//loop to check each item
+items.forEach(function(eachItem, itemId, allItems){
+  var numComponents = 0;
+  //counts the number of items in the materials
+  eachItem.materials.forEach(function(component, componentId, allMaterials){
+    numComponents += 1;
+  });
+  //checks the item to see if it has 8
+  if (numComponents >=8){
+    //logs title...
+    console.log(eachItem.title);
+    //... and all the components
+    eachItem.materials.forEach(function(component, componentId, allMaterials){
+      console.log(component);
+    });
+  }
+  // console.log(numComponents);
+});
