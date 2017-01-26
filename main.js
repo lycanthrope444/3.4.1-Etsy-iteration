@@ -23,7 +23,7 @@ items.forEach(function(eachItem){
   return totalNumberOfItems += 1;
 });
 
-console.log(totalNumberOfItems);
+// console.log(totalNumberOfItems);
 //converts everything to US dollars
 var itemCurrencyConverter = items.map(function(eachItem, itemId, allItems){
   console.log();
@@ -55,7 +55,18 @@ var priceFinderArray = items.map(function(eachItem, itemId, allItems){
   }
 });
 
-console.log(priceFinderArray);
+function isTrue (value){
+  if (value){
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+var cleanPriceArray = priceFinderArray.filter(isTrue);
+
+console.log(cleanPriceArray);
 
 /*
  * Question 3
@@ -68,3 +79,25 @@ items.forEach(function(eachItem, itemId, allItems){
     console.log(eachItem.title + " costs £" + eachItem.price);
   }
 });
+
+
+/*
+ * Question 4
+ */
+//Shows which items are made of wood
+
+//Loop through to check each items
+items.forEach(function(eachItem, itemId, allItems){
+  //Loop to check each array of materials
+  eachItem.materials.forEach(function(component, componentId, allMaterials){
+    //check for wood as a component
+    if (component === "wood"){
+      //log the result - listed as variable so the function could be changed
+      console.log(eachItem.title +" is made of "+component);
+    }
+  });
+});
+
+/*
+ * Question 5
+ */
