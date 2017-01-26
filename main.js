@@ -143,4 +143,4 @@ items.forEach(function(eachItem, itemId, allItems){
     creators += 1;
   }
 });
-console.log (creators, "were made by their sellers.");
+console.log (creators + " were made by their sellers.");
