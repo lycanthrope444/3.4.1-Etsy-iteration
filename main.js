@@ -126,3 +126,21 @@ items.forEach(function(eachItem, itemId, allItems){
   }
   // console.log(numComponents);
 });
+
+/*
+ * Question 6
+ */
+//function for filter
+// function creatorMade(originiation){
+//   if (origination === "i_did"){
+//     return true;
+//   }
+// }
+//Creator tester
+var creators = 0;
+items.forEach(function(eachItem, itemId, allItems){
+  if (eachItem.who_made === "i_did"){
+    creators += 1;
+  }
+});
+console.log (creators, "were made by their sellers.");
